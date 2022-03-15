@@ -22,6 +22,9 @@ module.exports = {
         sans: "var(--font-sans)",
         mono: "var(--font-mono)",
       },
+      boxShadow: {
+        "primary-left": "-10px 0px 30px -15px var(--primary-shadow)",
+      },
     },
     debugScreens: {
       position: ["top", "left"],

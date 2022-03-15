@@ -1,19 +1,31 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { ReactElement } from "react";
+import Button from "../components/Button";
+import AboutMe from "../components/forPages/home/AboutMe";
+import Intro from "../components/forPages/home/Intro";
+import WorkExperience from "../components/forPages/home/WorkExperience";
 import AppLayout from "../components/Layouts/App";
-import Navbar from "../components/Navbar";
 
+// NAVBAR_HEIGHT: '6rem'
 export default function Home() {
   return (
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-        recusandae tenetur itaque voluptas, hic ut repudiandae accusantium
-        reprehenderit expedita voluptatem veniam voluptate minus. Non nam
-        laboriosam, illum molestias nobis praesentium.
-      </p>
-    </div>
+    <>
+      {/* INTRO */}
+      <section className="min-h-[calc(100vh-6rem)] flex items-center">
+        <Intro />
+      </section>
+
+      {/* ABOUT ME */}
+      <section className="py-28">
+        <AboutMe />
+      </section>
+
+      {/* PAST WORK EXPERIENCE */}
+      <section className="py-28">
+        <WorkExperience />
+      </section>
+    </>
   );
 }
 
