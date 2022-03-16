@@ -1,6 +1,7 @@
 import React, { useMemo, useRef, useState } from "react";
 import { TabItem } from "./types";
 import classes from "./styles.module.scss";
+import useScreen from "../../hooks/useScreen";
 
 interface Props {
   items: Omit<TabItem, "content">[];
@@ -9,6 +10,7 @@ interface Props {
 
 export default function Tabs({ items, onSelectTab }: Props) {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+  const { isMd } = useScreen();
 
   const handleTabSelect = (idx: number, label: string) => {
     onSelectTab(idx, label);
@@ -16,9 +18,13 @@ export default function Tabs({ items, onSelectTab }: Props) {
   };
 
   const listRef = useRef<HTMLUListElement>(null);
-  let [indicatorLeft, indicatorWidth] = useMemo(() => {
+
+  const [indicatorXOffset, indicatorXWidth] = useMemo(() => {
     if (!listRef.current) {
       return [0, 0];
+    }
+    if (isMd) {
+      return [0, 3];
     }
     let distance = 0;
     let selected: any = listRef.current.childNodes[selectedTabIndex];
@@ -31,25 +37,55 @@ export default function Tabs({ items, onSelectTab }: Props) {
       selected = selected.previousSibling;
     }
 
-    const extra = (selectedTabIndex + 1) * 1;
+    const extra = (selectedTabIndex + 1) * 1; /*px*/
 
     return [distance, curWidth + extra];
-  }, [selectedTabIndex]);
+  }, [selectedTabIndex, isMd]);
 
-  console.log(indicatorLeft);
+  const [indicatorYOffset, indicatorYHeight] = useMemo(() => {
+    if (!listRef.current) {
+      return [0, 0];
+    }
+    if (!isMd) {
+      return [0, 3];
+    }
+    let distance = 0;
+    let selected: any = listRef.current.childNodes[selectedTabIndex];
+    let curHeight = selected.offsetHeight;
+
+    while (selected?.previousSibling) {
+      const prevHeight = selected.previousSibling.offsetHeight;
+      console.log("prevHeigth", prevHeight);
+      distance += selected.previousSibling.offsetHeight;
+      selected = selected.previousSibling;
+    }
+
+    const extra = (selectedTabIndex + 1) * 1; /*px*/
+
+    return [distance, curHeight + extra];
+  }, [selectedTabIndex, isMd]);
+
+  const shouldNotSetTop = indicatorYOffset === 0 && indicatorYHeight === 3;
+
+  console.log("Y::", indicatorYOffset, indicatorYHeight);
+  console.log("X::", indicatorXOffset, indicatorXWidth);
+  console.log("isMd", isMd);
 
   return (
     <div
       className={
-        `mb-5 relative overflow-x-scroll hide-scrollbar ` + classes.track
+        `mb-8 relative overflow-x-scroll hide-scrollbar ` +
+        (isMd ? classes.track__vertical : classes.track)
       }
     >
-      <ul ref={listRef} className="flex">
+      <ul ref={listRef} className="flex md:flex-col md:mr-8">
         {items.map((item, idx) => (
           <li
             onClick={() => handleTabSelect(idx, item.label)}
             className={`px-6 py-4 cursor-pointer ${
-              selectedTabIndex === idx ? "text-secondary" : "text-gray"
+              selectedTabIndex === idx
+                ? "text-secondary bg-primary-light"
+                : "text-gray"
             } `}
             key={item.label}
           >
@@ -59,8 +95,13 @@ export default function Tabs({ items, onSelectTab }: Props) {
       </ul>
 
       <div
-        style={{ left: indicatorLeft, width: indicatorWidth }}
-        className="absolute bottom-0 h-[3px] bg-secondary transition-all ease-in-out duration-500"
+        style={{
+          left: indicatorXOffset,
+          width: indicatorXWidth,
+          top: shouldNotSetTop ? undefined : indicatorYOffset,
+          height: indicatorYHeight,
+        }}
+        className="absolute bottom-0 bg-secondary transition-all ease-in-out duration-500"
       />
     </div>
   );

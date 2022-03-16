@@ -15,20 +15,20 @@ export default function TabContent({
   responsibilities,
 }: Props) {
   return (
-    <div className="border border-light">
+    <div>
       <div>
-        <h2>
-          {role} <span>@{place}</span>
+        <h2 className="text-xl text-gray-extra-light">
+          {role} <span className="text-secondary font-medium">@{place}</span>
         </h2>
-        <p>{timePeriod}</p>
+        <p className="font-mono text-sm">{timePeriod}</p>
       </div>
 
-      <div>
-        <ul>
+      <div className="text-sm mt-4">
+        <ul className="space-y-2">
           {responsibilities.map((responsibility) => (
-            <li key={responsibility}>
-              <span>
-                <BsCaretRight size={8} className="text-secondary" />
+            <li className="flex items-baseline" key={responsibility}>
+              <span className="mr-4">
+                <BsCaretRight size={10} className="text-secondary" />
               </span>
               <p>{responsibility}</p>
             </li>

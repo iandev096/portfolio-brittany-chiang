@@ -71,7 +71,7 @@ export default function TabView({}: Props) {
   );
 
   return (
-    <div>
+    <div className="md:flex">
       {/* TABS */}
       <Tabs items={ITEMS} onSelectTab={(index) => setSelectedTabIndex(index)} />
       {/* CONTENT */}
