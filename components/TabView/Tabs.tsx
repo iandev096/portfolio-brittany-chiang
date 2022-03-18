@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { TabItem } from "./types";
 import classes from "./styles.module.scss";
 import useScreen from "../../hooks/useScreen";
@@ -11,6 +11,11 @@ interface Props {
 export default function Tabs({ items, onSelectTab }: Props) {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
   const { isMd } = useScreen();
+  const [trackClass, setTrackClass] = useState<string>();
+
+  useLayoutEffect(() => {
+    setTrackClass(isMd ? classes.track__vertical : classes.track);
+  }, [isMd]);
 
   const handleTabSelect = (idx: number, label: string) => {
     onSelectTab(idx, label);
@@ -67,16 +72,9 @@ export default function Tabs({ items, onSelectTab }: Props) {
 
   const shouldNotSetTop = indicatorYOffset === 0 && indicatorYHeight === 3;
 
-  console.log("Y::", indicatorYOffset, indicatorYHeight);
-  console.log("X::", indicatorXOffset, indicatorXWidth);
-  console.log("isMd", isMd);
-
   return (
     <div
-      className={
-        `mb-8 relative overflow-x-scroll hide-scrollbar ` +
-        (isMd ? classes.track__vertical : classes.track)
-      }
+      className={`mb-8 relative overflow-x-scroll hide-scrollbar ` + trackClass}
     >
       <ul ref={listRef} className="flex md:flex-col md:mr-8">
         {items.map((item, idx) => (
@@ -101,7 +99,7 @@ export default function Tabs({ items, onSelectTab }: Props) {
           top: shouldNotSetTop ? undefined : indicatorYOffset,
           height: indicatorYHeight,
         }}
-        className="absolute bottom-0 bg-secondary transition-all ease-in-out duration-500"
+        className="absolute bottom-0 bg-secondary transition-all ease-out duration-500"
       />
     </div>
   );
