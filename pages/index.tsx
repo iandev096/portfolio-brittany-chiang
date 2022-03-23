@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import AboutMe from "../components/forPages/home/AboutMe";
 import Intro from "../components/forPages/home/Intro";
 import WorkExperience from "../components/forPages/home/WorkExperience";
+import Works from "../components/forPages/home/Works";
 import AppLayout from "../components/Layouts/App";
 
 // NAVBAR_HEIGHT: '6rem'
@@ -24,6 +25,11 @@ export default function Home() {
       {/* PAST WORK EXPERIENCE */}
       <section className="py-28">
         <WorkExperience />
+      </section>
+
+      {/* works */}
+      <section className="py-28">
+        <Works />
       </section>
     </>
   );
