@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import { SOCIAL_ITEMS2 } from "./data";
+import { SOCIAL_ITEMS2 } from "../../../data";
 import classes from "./styles.module.scss";
 
 interface Props {

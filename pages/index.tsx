@@ -3,6 +3,7 @@ import Head from "next/head";
 import { ReactElement } from "react";
 import Button from "../components/Button";
 import AboutMe from "../components/forPages/home/AboutMe";
+import Contact from "../components/forPages/home/Contact";
 import Intro from "../components/forPages/home/Intro";
 import WorkExperience from "../components/forPages/home/WorkExperience";
 import Works from "../components/forPages/home/Works";
@@ -31,6 +32,27 @@ export default function Home() {
       <section className="py-28">
         <Works />
       </section>
+
+      {/* contact me */}
+      <section className="py-28">
+        <Contact />
+      </section>
+
+      <footer className="text-center font-mono text-xs leading-7 mt-16 py-4 bg-primary-dark">
+        <div></div>
+        <div>
+          <p>
+            Designed by{" "}
+            <a className="text-secondary" href="https://brittanychiang.com/">
+              Brittany Chiang
+            </a>
+          </p>
+          <p>
+            Implemented by{" "}
+            <span className="text-secondary">Isaac Anyimiah</span>
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

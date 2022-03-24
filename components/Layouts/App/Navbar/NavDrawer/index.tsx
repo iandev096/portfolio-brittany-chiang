@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 import DrawerItem from "./DrawerItem";
 import Button from "../../../../Button";
 import SocialItem from "./SocialItem";
-import { DRAWER_ITEMS, SOCIAL_ITEMS } from "../../data";
+import { DRAWER_ITEMS, SOCIAL_ITEMS } from "../../../../../data";
 
 interface Props {
   show: boolean;

@@ -1,4 +1,10 @@
-import React, { useLayoutEffect, useMemo, useRef, useState } from "react";
+import React, {
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { TabItem } from "./types";
 import classes from "./styles.module.scss";
 import useScreen from "../../hooks/useScreen";
@@ -13,7 +19,7 @@ export default function Tabs({ items, onSelectTab }: Props) {
   const { isMd } = useScreen();
   const [trackClass, setTrackClass] = useState<string>();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setTrackClass(isMd ? classes.track__vertical : classes.track);
   }, [isMd]);
 
