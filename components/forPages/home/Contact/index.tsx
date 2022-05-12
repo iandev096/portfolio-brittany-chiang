@@ -23,7 +23,9 @@ export default function Contact({}: Props) {
           iure, aspernatur ipsum?
         </p>
         <div className="pt-8 flex justify-end">
-          <Button className="w-full">Contact</Button>
+          <Button className="w-full" size="lg">
+            Contact
+          </Button>
         </div>
       </div>
     </div>
