@@ -4,9 +4,9 @@ import ProjectItem from "../../../ProjectItem";
 import { OTHER_PROJ_ITEMS, PROJECT_ITEMS } from "../../../../data";
 import ProjectCard from "../../../ProjectCard";
 
-interface Props {}
+interface Props { }
 
-export default function Works({}: Props) {
+export default function Works({ }: Props) {
   return (
     <div>
       <SectionHeading prepend="03" title="Projects I have Worked on" />
@@ -18,7 +18,7 @@ export default function Works({}: Props) {
 
       <div className="mt-28">
         <SectionHeading prepend="03.5" title="Other Noteworthy Projects" />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {OTHER_PROJ_ITEMS.map((item, idx) => (
             <ProjectCard {...item} key={item.title} />
           ))}
