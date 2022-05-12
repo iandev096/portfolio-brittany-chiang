@@ -50,7 +50,7 @@ export default function NavDrawer({ show, onClose }: Props) {
             />
             <div className="space-y-[5vh] mt-[18vh] text-right">
               {DRAWER_ITEMS.map((item, idx) => (
-                <DrawerItem key={item} item={item} count={idx + 1} />
+                <DrawerItem onClick={onClose} key={item} item={item} count={idx + 1} />
               ))}
               <Button className="px-14" size="lg">
                 CV
