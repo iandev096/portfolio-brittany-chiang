@@ -14,27 +14,27 @@ export default function Home() {
   return (
     <>
       {/* INTRO */}
-      <section className="min-h-[calc(100vh-6rem)] flex items-center">
+      <section id="intro" className="min-h-[calc(100vh-6rem)] flex items-center">
         <Intro />
       </section>
 
       {/* ABOUT ME */}
-      <section className="py-28">
+      <section id="about" className="py-28">
         <AboutMe />
       </section>
 
       {/* PAST WORK EXPERIENCE */}
-      <section className="py-28">
+      <section id="experience" className="py-28">
         <WorkExperience />
       </section>
 
       {/* works */}
-      <section className="py-28">
+      <section id="work" className="py-28">
         <Works />
       </section>
 
       {/* contact me */}
-      <section className="py-28">
+      <section id="contact" className="py-28">
         <Contact />
       </section>
 
