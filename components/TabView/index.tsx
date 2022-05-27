@@ -7,60 +7,42 @@ interface Props {}
 
 const ITEMS = [
   {
-    label: "Wekplace",
+    label: "Expresspay",
     content: {
-      role: "Engineer",
-      place: "Wekplace",
-      timePeriod: "May 2018",
-      responsibilities: ["Write code", "Debug code"],
-    },
-  },
-  {
-    label: "AppGig",
-    content: {
-      role: "Engineer",
-      place: "AppGig",
-      timePeriod: "May 2018",
-      responsibilities: ["Write code", "Debug code"],
+      role: "Frontend Engineer",
+      place: "Expresspay",
+      timePeriod: "2021 - 2022",
+      responsibilities: ["Built the documentation site for the expressPay payment APIs.", "Built a developer dashboard that enables developers to manage access to the payment APIs.", "Working on a retail platform that allows retailers to sell expressPay's services."],
     },
   },
   {
     label: "Cyboticx",
     content: {
-      role: "Engineer",
+      role: "Software Developer",
       place: "Cyboticx",
-      timePeriod: "May 2018",
-      responsibilities: ["Write code", "Debug code"],
+      timePeriod: "2021",
+      responsibilities: ["Worked closely with the team (two frontend developers, one UX/UI designer and the backend developer to build a mobile tourist application).", "Worked with the team to build a system (comprised of an admin dashboard, a web application and a mobile application) for managing the dispatch of nurses and medical equipments to various hospitals."],
     },
   },
   {
-    label: "ExpressPay",
+    label: "AppGig",
     content: {
-      role: "Engineer",
+      role: "Frontend Developer",
+      place: "AppGig",
+      timePeriod: "2019 - 2020",
+      responsibilities: ["Built multiple websites.", "Built a mobile application for making errands and renting vehicles.", "Built a mobile application for laundry services.", "Built a vendor mobile application for ordering food."],
+    },
+  },
+  {
+    label: "Wekplace",
+    content: {
+      role: "Web Developer",
       place: "ExpressPay",
-      timePeriod: "May 2018",
-      responsibilities: ["Write code", "Debug code"],
+      timePeriod: "2018 - 2019",
+      responsibilities: ["Built a web platform for managing job openings and recruitments."],
     },
   },
-  {
-    label: "Mpharma",
-    content: {
-      role: "Engineer",
-      place: "Mpharma",
-      timePeriod: "May 2018",
-      responsibilities: ["Write code", "Debug code"],
-    },
-  },
-  {
-    label: "Hotjar",
-    content: {
-      role: "Engineer",
-      place: "Hotjar",
-      timePeriod: "May 2018",
-      responsibilities: ["Write code", "Debug code"],
-    },
-  },
-];
+ ];
 
 export default function TabView({}: Props) {
   const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0);

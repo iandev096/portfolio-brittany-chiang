@@ -80,7 +80,7 @@ export default function Tabs({ items, onSelectTab }: Props) {
 
   return (
     <div
-      className={`mb-8 relative overflow-x-scroll hide-scrollbar ` + trackClass}
+      className={`mb-8 relative overflow-x-scroll hide-scrollbar shrink-0 ` + trackClass}
     >
       <ul ref={listRef} className="flex md:flex-col md:mr-8">
         {items.map((item, idx) => (

@@ -43,8 +43,8 @@ export default function Navbar({ onDrawerToggled, className = "" }: Props) {
           showNav ? "top-0" : "-top-24"
         } items-center justify-between bg-primary-light h-24 px-6 sm:px-12 transition-all duration-200 ${className}`}
       >
-        <a>
-          <h1 className="text-xl text-secondary">IA</h1>
+        <a className="w-12">
+          <img src='/images/logo.svg' />
         </a>
         <ol className="hidden gap-8 md:flex md:items-center">
           {NAV_ITEMS.map((item, idx) => (

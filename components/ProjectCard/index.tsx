@@ -26,22 +26,22 @@ export default function ProjectCard({
           <a href={githubUrl}>
             <RiGithubLine size={20} />
           </a>
-          <a href={githubUrl}>
+          <a href={projectUrl}>
             <RiShareBoxLine size={20} />
           </a>
         </div>
       </div>
 
-      <a href={githubUrl}>
+      <a href={projectUrl}>
         <h2 className="text-xl font-semibold text-gray-extra-light mb-4">
           {title}
         </h2>
       </a>
-      <p className="mb-8">{description}</p>
+      <p className="mb-8 text-sm leading-relaxed">{description}</p>
 
-      <ul className="flex gap-4 mb-4 px-6 md:px-0 overflow-x-scroll text-xs font-mono">
+      <ul className="flex gap-4 mb-4 px-6 md:px-0 overflow-x-scroll text-xs font-mono hide-scrollbar">
         {tags.map((tag) => (
-          <li key={tag}>{tag}</li>
+          <li className="shrink-0" key={tag}>{tag}</li>
         ))}
       </ul>
     </div>

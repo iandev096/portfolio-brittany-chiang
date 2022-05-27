@@ -12,6 +12,12 @@ interface Props {
   imageSrc: string;
 }
 
+const openExternalLink = (url: string) => {
+  window.open(url,'_blank');
+  console.log('ópen', url)
+}
+
+
 export default function ProjectItem({
   description,
   title,
@@ -22,6 +28,7 @@ export default function ProjectItem({
   reverse,
   imageSrc,
 }: Props) {
+  
   return (
     <div className="md:grid grid-cols-12 group">
       <div
@@ -29,7 +36,7 @@ export default function ProjectItem({
           reverse ? "col-start-6 col-end-[-1]" : "col-start-1 col-end-8"
         } row-start-1 cursor-pointer row-end-2 relative shadow-primary-shadow md:shadow-lg rounded-md overflow-hidden -z-10 md:z-auto`}
       >
-        <div className="absolute inset-0 z-10 bg-primary-light opacity-70 group-hover:opacity-0 transition-all" />
+        <div onClick={() => openExternalLink(projectUrl)} className="absolute inset-0 z-10 bg-primary-light opacity-70 group-hover:opacity-0 transition-all" />
         <img
           alt={title}
           className="w-full h-full object-left-top object-cover grayscale-[80%] group-hover:grayscale-[20%] transition-all"
@@ -50,7 +57,7 @@ export default function ProjectItem({
           {title}
         </h2>
         <div className="my-6 md:bg-primary-light shadow-primary-shadow md:shadow-lg px-6 py-5">
-          <p>{description}</p>
+          <p className="text-sm leading-relaxed">{description}</p>
         </div>
         <ul
           className={`flex gap-4 mb-4 px-6 md:px-0  text-xs font-mono ${

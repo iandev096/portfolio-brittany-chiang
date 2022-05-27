@@ -15,23 +15,13 @@ export default function AboutMe({}: Props) {
       <div className="flex flex-col sm:flex-row justify-between">
         <div className="text-sm space-y-4 sm:w-8/12 sm:mr-12">
           <SectionHeading prepend="01" title="About Me" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta
-            itaque pariatur quod impedit sequi deserunt possimus minima labore
-            unde maxime exercitationem vel velit reprehenderit repellendus
-            quaerat, esse a quasi!
+          <p className="leading-relaxed">
+            Understanding problems and solving them - This is a perfect description of the things I love doing. I guess that is why I enjoy programming. From my point of view, that summarizes a great deal of what software engineering is about. In the end, it all boils down to identifying a problem, breaking it down and solving the problem with the power of computing.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam illum
-            magni eos libero. Reprehenderit blanditiis dignissimos nemo iste
-            voluptates provident, officiis excepturi ad at maxime temporibus qui
-            iure, aspernatur ipsum?
+          <p className="leading-relaxed">
+            I want to make a difference by becoming a force for good in the world. When all is said and done, if I can look back and see that I helped made the world a better place, I'd be very glad; and to that end, I strive to be a better developer every passing day.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            assumenda aliquid ut consequuntur ullam voluptate quas blanditiis,
-          </p>
-          <p>Here are a few technologies I know how to use very well:</p>
+          <p className="leading-relaxed">Here are a few technologies I know how to use very well:</p>
           <div className="columns-2 font-mono text-xs pb-4 sm:w-8/12 md:w-7/12 lg:w-6/12">
             {TECHS.map((list) => (
               <ul key={list.toString()} className="space-y-2">

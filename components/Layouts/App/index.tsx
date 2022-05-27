@@ -43,6 +43,8 @@ export default function AppLayout({ children }: Props) {
             <a
               className="cursor-pointer text-gray hover:text-secondary"
               key={Item.url}
+              target='_blank'
+              href={Item.url}
             >
               <Item.Icon size={18} />
             </a>

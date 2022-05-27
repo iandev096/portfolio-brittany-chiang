@@ -38,8 +38,7 @@ export default function Home() {
         <Contact />
       </section>
 
-      <footer className="text-center font-mono text-xs leading-7 mt-16 py-4 bg-primary-dark">
-        <div></div>
+      <footer className="relative text-center font-mono text-xs leading-7 mt-16 py-4 bg-primary-dark">
         <div>
           <p>
             Designed by{" "}
@@ -52,6 +51,7 @@ export default function Home() {
             <span className="text-secondary">Isaac Anyimiah</span>
           </p>
         </div>
+        <div className="absolute inset-0 scale-x-150 bg-primary-dark -z-10" />
       </footer>
     </>
   );

@@ -23,8 +23,8 @@ export default function TabContent({
         <p className="font-mono text-sm">{timePeriod}</p>
       </div>
 
-      <div className="text-sm mt-4">
-        <ul className="space-y-2">
+      <div className="text-sm mt-8">
+        <ul className="space-y-4">
           {responsibilities.map((responsibility) => (
             <li className="flex items-baseline" key={responsibility}>
               <span className="mr-4">
