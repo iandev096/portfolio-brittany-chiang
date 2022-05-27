@@ -2,22 +2,23 @@ import { GrGithub, GrLinkedinOption, GrMail, GrYoutube } from "react-icons/gr";
 import {
   AiOutlineGithub,
   AiOutlineLinkedin,
+  AiOutlineMail,
   AiOutlineYoutube,
 } from "react-icons/ai";
 import { IconItem } from "./components/Layouts/App/Navbar/NavDrawer/SocialItem";
 
 export const SOCIAL_ITEMS: IconItem[] = [
   { Icon: GrGithub, url: "https://github.com/iandev096" },
-  { Icon: GrLinkedinOption, url: "https://linkedin.com/iandev096" },
+  { Icon: GrLinkedinOption, url: "https://www.linkedin.com/in/ianyimiah/" },
   // { Icon: GrYoutube, url: "https://youtube.com/iandev096" },
-  { Icon: GrMail, url: "https://gmail.com/iandev096" },
+  { Icon: GrMail, url: "mailto:ianyimiah@gmail.com" },
 ];
 
 export const SOCIAL_ITEMS2: IconItem[] = [
   { Icon: AiOutlineGithub, url: "https://github.com/iandev096" },
-  { Icon: AiOutlineLinkedin, url: "https://linkedin.com/ianyimiah" },
+  { Icon: AiOutlineLinkedin, url: "https://www.linkedin.com/in/ianyimiah/" },
   // { Icon: AiOutlineYoutube, url: "https://youtube.com/iandev096" },
-  // { Icon: AiOutlineMail, url: "https://github.com/iandev096" },
+  { Icon: AiOutlineMail, url: "mailto:ianyimiah@gmail.com" },
 ];
 
 export const DRAWER_ITEMS = ["About", "Experience", "Work", "Contact"];
