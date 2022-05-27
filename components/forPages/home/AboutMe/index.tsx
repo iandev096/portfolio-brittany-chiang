@@ -38,7 +38,7 @@ export default function AboutMe({}: Props) {
           <div className="w-4/6 min-w-[180px] max-w-[300px] mx-auto mt-4 sm:m-0 sm:w-full bg-light opacity-90 mix-blend-color-dodge hover:mix-blend-normal outline outline-2 outline-offset-8 outline-secondary hover:outline-gray-dark">
             <img
               className="h-full w-full brightness-95"
-              src="/images/me.png"
+              src="/images/me.jpg"
               alt="Isaac Anyimiah"
             />
           </div>
