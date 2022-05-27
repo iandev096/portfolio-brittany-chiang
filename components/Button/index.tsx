@@ -12,7 +12,7 @@ export default function Button({ size = "md", className, ...props }: Props) {
 
   return (
     <button
-      className={`${px[size]} ${py[size]} ${text[size]} transition duration-200 bg-transparent border rounded-md hover:bg-secondary-tint text-secondary font-mono border-secondary ${className}`}
+      className={`${px[size]} ${py[size]} ${text[size]} transition duration-200 bg-transparent border rounded-sm hover:bg-secondary-tint text-secondary font-mono border-secondary ${className}`}
       {...props}
     />
   );

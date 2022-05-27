@@ -41,11 +41,11 @@ export default function Navbar({ onDrawerToggled, className = "" }: Props) {
   return (
     <>
       <header
-        className={`flex fixed w-full z-50 ${
+        className={`shadow-lg flex fixed w-full z-50 ${
           showNav ? "top-0" : "-top-24"
         } items-center justify-between bg-primary-light h-24 px-6 sm:px-12 transition-all duration-200 ${className}`}
       >
-        <a className="w-12">
+        <a className="w-12" href="#intro">
           <Image width={951} height={528} layout='responsive' src='/images/logo.svg' />
         </a>
         <ol className="hidden gap-8 md:flex md:items-center">
