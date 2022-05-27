@@ -1,5 +1,6 @@
 import React from "react";
 import { RiGithubLine, RiShareBoxLine } from "react-icons/ri";
+import openExternalLink from "../../util/url";
 
 interface Props {
   title: string;
@@ -12,10 +13,6 @@ interface Props {
   imageSrc: string;
 }
 
-const openExternalLink = (url: string) => {
-  window.open(url,'_blank');
-  console.log('ópen', url)
-}
 
 
 export default function ProjectItem({

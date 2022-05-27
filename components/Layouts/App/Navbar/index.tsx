@@ -5,6 +5,7 @@ import { RiMenu4Line } from "react-icons/ri";
 import NavDrawer from "./NavDrawer";
 import useNavDrawer from "./useNavDrawer";
 import Image from "next/image";
+import openExternalLink from "../../../../util/url";
 
 const NAV_ITEMS = ["About", "Experience", "Work", "Contact"];
 
@@ -51,7 +52,7 @@ export default function Navbar({ onDrawerToggled, className = "" }: Props) {
           {NAV_ITEMS.map((item, idx) => (
             <NavItem key={idx} item={item} count={idx + 1} />
           ))}
-          <Button>CV</Button>
+          <Button onClick={() => openExternalLink('https://drive.google.com/file/d/1vSucJkxLZzoigYoX2F-XviKjIMLTWWsb/view')}>CV</Button>
         </ol>
         <RiMenu4Line
           onClick={() => toggleDrawer(true)}
