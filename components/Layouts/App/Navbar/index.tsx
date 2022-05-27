@@ -4,6 +4,7 @@ import NavItem from "./NavItem";
 import { RiMenu4Line } from "react-icons/ri";
 import NavDrawer from "./NavDrawer";
 import useNavDrawer from "./useNavDrawer";
+import Image from "next/image";
 
 const NAV_ITEMS = ["About", "Experience", "Work", "Contact"];
 
@@ -44,7 +45,7 @@ export default function Navbar({ onDrawerToggled, className = "" }: Props) {
         } items-center justify-between bg-primary-light h-24 px-6 sm:px-12 transition-all duration-200 ${className}`}
       >
         <a className="w-12">
-          <img src='/images/logo.svg' />
+          <Image src='/images/logo.svg' />
         </a>
         <ol className="hidden gap-8 md:flex md:items-center">
           {NAV_ITEMS.map((item, idx) => (

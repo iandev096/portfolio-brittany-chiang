@@ -39,7 +39,7 @@ export default function ProjectCard({
       </a>
       <p className="mb-8 text-sm leading-relaxed">{description}</p>
 
-      <ul className="flex gap-4 mb-4 px-6 md:px-0 overflow-x-scroll text-xs font-mono hide-scrollbar">
+      <ul className="flex gap-4 mb-4 md:px-0 overflow-x-scroll text-xs font-mono hide-scrollbar">
         {tags.map((tag) => (
           <li className="shrink-0" key={tag}>{tag}</li>
         ))}

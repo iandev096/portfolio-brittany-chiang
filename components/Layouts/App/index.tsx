@@ -19,7 +19,7 @@ export default function AppLayout({ children }: Props) {
           name="My Portfolio"
           content="Showcase of my skills and my projects"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Navbar
@@ -44,6 +44,7 @@ export default function AppLayout({ children }: Props) {
               className="cursor-pointer text-gray hover:text-secondary"
               key={Item.url}
               target='_blank'
+              rel="noreferrer"
               href={Item.url}
             >
               <Item.Icon size={18} />

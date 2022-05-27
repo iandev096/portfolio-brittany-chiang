@@ -8,7 +8,7 @@ const Portal = ({
   rootId: string;
   children: React.ReactNode;
 }) => {
-  const target = useRef<HTMLDivElement>(null);
+  const target = useRef<any>(null);
 
   useEffect(() => {
     let container = document.getElementById(rootId);

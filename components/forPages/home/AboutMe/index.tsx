@@ -19,7 +19,7 @@ export default function AboutMe({}: Props) {
             Understanding problems and solving them - This is a perfect description of the things I love doing. I guess that is why I enjoy programming. From my point of view, that summarizes a great deal of what software engineering is about. In the end, it all boils down to identifying a problem, breaking it down and solving the problem with the power of computing.
           </p>
           <p className="leading-relaxed">
-            I want to make a difference by becoming a force for good in the world. When all is said and done, if I can look back and see that I helped made the world a better place, I'd be very glad; and to that end, I strive to be a better developer every passing day.
+            I want to make a difference by becoming a force for good in the world. When all is said and done, if I can look back and see that I helped made the world a better place, I&apos;d be very glad; and to that end, I strive to be a better developer every passing day.
           </p>
           <p className="leading-relaxed">Here are a few technologies I know how to use very well:</p>
           <div className="columns-2 font-mono text-xs pb-4 sm:w-8/12 md:w-7/12 lg:w-6/12">
