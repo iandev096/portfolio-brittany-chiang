@@ -45,7 +45,7 @@ export default function Navbar({ onDrawerToggled, className = "" }: Props) {
         } items-center justify-between bg-primary-light h-24 px-6 sm:px-12 transition-all duration-200 ${className}`}
       >
         <a className="w-12">
-          <Image src='/images/logo.svg' />
+          <Image width={951} height={528} layout='responsive' src='/images/logo.svg' />
         </a>
         <ol className="hidden gap-8 md:flex md:items-center">
           {NAV_ITEMS.map((item, idx) => (
