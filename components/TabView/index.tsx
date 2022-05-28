@@ -1,11 +1,10 @@
 import React, { useMemo, useState } from "react";
 import TabContent from "./TabContent";
 import Tabs from "./Tabs";
-import { TabItem } from "./types";
 
 interface Props {}
 
-const ITEMS = [
+const EXP_ITEMS = [
   {
     label: "Expresspay",
     content: {
@@ -37,7 +36,7 @@ const ITEMS = [
     label: "Wekplace",
     content: {
       role: "Web Developer",
-      place: "ExpressPay",
+      place: "Wekplace",
       timePeriod: "2018 - 2019",
       responsibilities: ["Built a web platform for managing job openings and recruitments."],
     },
@@ -48,14 +47,14 @@ export default function TabView({}: Props) {
   const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0);
 
   const selectedTabContent = useMemo(
-    () => ITEMS[selectedTabIndex].content,
+    () => EXP_ITEMS[selectedTabIndex].content,
     [selectedTabIndex]
   );
 
   return (
     <div className="md:flex">
       {/* TABS */}
-      <Tabs items={ITEMS} onSelectTab={(index) => setSelectedTabIndex(index)} />
+      <Tabs items={EXP_ITEMS} onSelectTab={(index) => setSelectedTabIndex(index)} />
       {/* CONTENT */}
       <TabContent
         role={selectedTabContent.role}

@@ -28,7 +28,7 @@ export default function AppLayout({ children }: Props) {
       />
 
       <main
-        className={`transition-all duration-200 ${
+        className={`transition-all duration-200 overflow-x-hidden ${
           blurApp ? "blur-sm" : ""
         } pt-24`}
       >
