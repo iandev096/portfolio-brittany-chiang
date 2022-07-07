@@ -1,6 +1,8 @@
 import { hotjar } from "react-hotjar";
 import { IS_PROD_MODE } from "./constants";
 
+console.log("process.env::", process.env);
+
 function initializeHotjar() {
   if (!IS_PROD_MODE) {
     return;
