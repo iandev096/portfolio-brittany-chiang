@@ -9,14 +9,14 @@ function initializeHotjar() {
     return;
   }
 
-  if (!process.env.HJID || !process.env.HJSV) {
+  if (!process.env.NEXT_PUBLIC_HJID || !process.env.NEXT_PUBLIC_HJSV) {
     console.log("Environment variables not set");
-    console.log("process.env.HJID::", process.env.HJID);
-    console.log("process.env.HJSV::", process.env.HJSV);
+    console.log("process.env.HJID::", process.env.NEXT_PUBLIC_HJID);
+    console.log("process.env.HJSV::", process.env.NEXT_PUBLIC_HJSV);
   }
 
-  const hjid = Number(process.env.HJID);
-  const hjsv = Number(process.env.HJSV);
+  const hjid = Number(process.env.NEXT_PUBLIC_HJID);
+  const hjsv = Number(process.env.NEXT_PUBLIC_HJSV);
 
   hotjar.initialize(hjid, hjsv);
 }
