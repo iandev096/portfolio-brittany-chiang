@@ -1,6 +1,3 @@
-import React from "react";
-import Button from "../../../Button";
-
 interface Props {}
 
 export default function Intro({}: Props) {
@@ -12,11 +9,16 @@ export default function Intro({}: Props) {
         I build mobile and web apps.
       </h2>
       <p className="sm:w-[80%] mb-14 leading-relaxed text-sm">
-        <span className="text-secondary">Highly-skilled frontend engineer</span> with over <span className="text-secondary">7 years</span> of professional experience, specializing in building applications with <span className="text-secondary">Javascript/Typescript</span> technologies. 
-        Proven ability to develop and implement A/B tests and new features weekly, significantly increasing conversion rates for high-profile clients (Pizzahut, PremierInn, Mulberry, etc). 
-        Experienced in constructing responsive, user-friendly interfaces and entire websites and web applications from the ground up.
+        <span className="text-secondary">Highly-skilled frontend engineer</span>{" "}
+        with over <span className="text-secondary">7 years</span> of
+        professional experience, specializing in building applications with{" "}
+        <span className="text-secondary">Javascript/Typescript</span>{" "}
+        technologies. Proven ability to develop and implement A/B tests and new
+        features weekly, significantly increasing conversion rates for
+        high-profile clients (Pizzahut, PremierInn, Mulberry, etc). Experienced
+        in constructing responsive, user-friendly interfaces and entire websites
+        and web applications from the ground up.
       </p>
-      {/* <Button size="lg">Check out my channel</Button> */}
     </div>
   );
 }
