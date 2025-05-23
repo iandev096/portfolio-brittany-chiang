@@ -12,10 +12,9 @@ export default function Intro({}: Props) {
         I build mobile and web apps.
       </h2>
       <p className="sm:w-[80%] mb-14 leading-relaxed text-sm">
-        I&apos;m an{" "}
-        <span className="text-secondary">JavaScript developer</span> with
-        <span className="text-secondary"> frontend</span> specialization.
-        Currently, I work at expressPay as a Frontend Engineer (in collaboration with backend engineers and ui/ux designers) implementing component-based responsive user interfaces and consuming APIs to deliver delightful user experiences. 
+        <span className="text-secondary">Highly-skilled frontend engineer</span> with over <span className="text-secondary">7 years</span> of professional experience, specializing in building applications with <span className="text-secondary">Javascript/Typescript</span> technologies. 
+        Proven ability to develop and implement A/B tests and new features weekly, significantly increasing conversion rates for high-profile clients (Pizzahut, PremierInn, Mulberry, etc). 
+        Experienced in constructing responsive, user-friendly interfaces and entire websites and web applications from the ground up.
       </p>
       {/* <Button size="lg">Check out my channel</Button> */}
     </div>
