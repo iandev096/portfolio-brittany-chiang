@@ -1,7 +1,4 @@
-import type { NextPage } from "next";
-import Head from "next/head";
 import { ReactElement } from "react";
-import Button from "../components/Button";
 import AboutMe from "../components/forPages/home/AboutMe";
 import Contact from "../components/forPages/home/Contact";
 import Intro from "../components/forPages/home/Intro";
@@ -14,7 +11,10 @@ export default function Home() {
   return (
     <>
       {/* INTRO */}
-      <section id="intro" className="min-h-[calc(100vh-6rem)] flex items-center">
+      <section
+        id="intro"
+        className="min-h-[calc(100vh-6rem)] flex items-center"
+      >
         <Intro />
       </section>
 
@@ -41,7 +41,7 @@ export default function Home() {
       <footer className="relative text-center font-mono text-xs leading-7 mt-16 py-4 bg-primary-dark">
         <div>
           <p>
-            Designed by{" "}
+            Inspired by{" "}
             <a className="text-secondary" href="https://brittanychiang.com/">
               Brittany Chiang
             </a>
