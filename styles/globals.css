@@ -2,25 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html {
-  --primary: hsl(300, 65%, 11%);
-  --primary-dark: hsl(302, 87%, 6%);
-  --primary-light: hsl(300, 58%, 16%);
-  --primary-extra-light: hsl(300, 41%, 23%);
-  --primary-shadow: hsla(302, 86%, 6%, 0.702);
-  --gray-dark: hsl(300, 21%, 36%);
-  --gray: hsl(295, 20%, 61%);
-  --gray-light: hsl(300, 31%, 74%);
-  --gray-extra-light: hsl(293, 70%, 88%);
-  --light: hsl(319, 100%, 95%);
-  --secondary: hsl(66, 100%, 70%);
-  --secondary-tint: hsla(78, 100%, 70%, 0.1);
-  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
-  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-} */
-
 html {
+  --primary: #2d1810; /* Deep burgundy-brown */
+  --primary-dark: #1a0f0a; /* Darker shade for depth */
+  --primary-light: #3d2419; /* Rich brown */
+  --primary-extra-light: #5d3628; /* Warm highlight color */
+  --primary-shadow: rgba(26, 15, 10, 0.7);
+  --gray-dark: #8b7355; /* Warm gray */
+  --gray: #b8a088; /* Muted brown-gray */
+  --gray-light: #d4c4b0; /* Light warm gray */
+  --gray-extra-light: #f0e6d9; /* Cream white */
+  --light: #fff8f0; /* Warm off-white */
+  --secondary: #e6a17c; /* Warm coral accent */
+  --secondary-tint: rgba(230, 161, 124, 0.1);
+  --font-sans: "Poppins", sans-serif;
+  --font-mono: "Spline Sans Mono", monospace;
+}
+
+/* html {
   --primary: #0a192f;
   --primary-dark: #020c1b;
   --primary-light: #112240;
@@ -35,7 +34,7 @@ html {
   --secondary-tint: rgba(100, 255, 218, 0.1);
   --font-sans: "Poppins", sans-serif;
   --font-mono: "Spline Sans Mono", monospace;
-}
+} */
 
 /* BASE STYLES */
 body {
