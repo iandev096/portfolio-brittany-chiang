@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import Button from "../../../Button";
-import NavItem from "./NavItem";
-import { RiMenu4Line } from "react-icons/ri";
-import NavDrawer from "./NavDrawer";
-import useNavDrawer from "./useNavDrawer";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { RiMenu4Line } from "react-icons/ri";
 import openExternalLink from "../../../../util/url";
+import Button from "../../../Button";
+import NavDrawer from "./NavDrawer";
+import NavItem from "./NavItem";
+import useNavDrawer from "./useNavDrawer";
 
 const NAV_ITEMS = ["About", "Experience", "Work", "Contact"];
 
@@ -45,14 +45,27 @@ export default function Navbar({ onDrawerToggled, className = "" }: Props) {
           showNav ? "top-0" : "-top-24"
         } items-center justify-between bg-primary-light h-24 px-6 sm:px-12 transition-all duration-200 ${className}`}
       >
-        <a className="w-12" href="#intro">
-          <Image width={951} height={528} layout='responsive' src='/images/logo.svg' />
+        <a className="w-12 hue-rotate-[245deg]" href="#intro">
+          <Image
+            width={951}
+            height={528}
+            layout="responsive"
+            src="/images/logo.svg"
+          />
         </a>
         <ol className="hidden gap-8 md:flex md:items-center">
           {NAV_ITEMS.map((item, idx) => (
             <NavItem key={idx} item={item} count={idx + 1} />
           ))}
-          <Button onClick={() => openExternalLink('https://drive.google.com/file/d/1vSucJkxLZzoigYoX2F-XviKjIMLTWWsb/view')}>CV</Button>
+          <Button
+            onClick={() =>
+              openExternalLink(
+                "https://drive.google.com/file/d/1vSucJkxLZzoigYoX2F-XviKjIMLTWWsb/view"
+              )
+            }
+          >
+            CV
+          </Button>
         </ol>
         <RiMenu4Line
           onClick={() => toggleDrawer(true)}
