@@ -1,6 +1,5 @@
-import React from "react";
-import SectionHeading from "../../../Typography/SectionHeading";
 import TechItem from "../../../TechItem";
+import SectionHeading from "../../../Typography/SectionHeading";
 
 interface Props {}
 
@@ -16,12 +15,23 @@ export default function AboutMe({}: Props) {
         <div className="text-sm space-y-4 sm:w-8/12 sm:mr-12">
           <SectionHeading prepend="01" title="About Me" />
           <p className="leading-relaxed">
-            Understanding problems and solving them - This is a perfect description of the things I love doing. I guess that is why I enjoy programming. From my point of view, that summarizes a great deal of what software engineering is about. In the end, it all boils down to identifying a problem, breaking it down and solving the problem with the power of computing.
+            My foundation in software engineering is built on a strong aptitude
+            for analytical problem-solving. I am passionate about dissecting
+            complex challenges, identifying core requirements, and developing
+            effective, technology-driven solutions. This methodical approach to
+            transforming problems into functional applications is what I find
+            most compelling about the field.
           </p>
           <p className="leading-relaxed">
-            I want to make a difference by becoming a force for good in the world. When all is said and done, if I can look back and see that I helped made the world a better place, I&apos;d be very glad; and to that end, I strive to be a better developer every passing day.
+            I am driven to leverage these skills to contribute to projects that
+            deliver meaningful and positive outcomes. My aspiration is to
+            utilize technology as a constructive force, and this goal fuels my
+            commitment to continuous professional development and a dedicated
+            effort to enhance my expertise as a developer with each passing day.
           </p>
-          <p className="leading-relaxed">Here are a few technologies I know how to use very well:</p>
+          <p className="leading-relaxed">
+            My key technical proficiencies include:
+          </p>
           <div className="columns-2 font-mono text-xs pb-4 sm:w-8/12 md:w-7/12 lg:w-6/12">
             {TECHS.map((list) => (
               <ul key={list.toString()} className="space-y-2">
