@@ -15,9 +15,12 @@ export default function Intro({}: Props) {
         <span className="text-secondary">Javascript/Typescript</span>{" "}
         technologies. Proven ability to develop and implement A/B tests and new
         features weekly, significantly increasing conversion rates for
-        high-profile clients (Pizzahut, PremierInn, Mulberry, etc). Experienced
-        in constructing responsive, user-friendly interfaces and entire websites
-        and web applications from the ground up.
+        high-profile clients (
+        <span className="text-secondary">
+          Pizzahut, PremierInn, Mulberry, etc
+        </span>
+        ). Experienced in constructing responsive, user-friendly interfaces and
+        entire websites and web applications from the ground up.
       </p>
     </div>
   );

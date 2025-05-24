@@ -18,11 +18,6 @@ export default function Home() {
         <Intro />
       </section>
 
-      {/* ABOUT ME */}
-      <section id="about" className="py-28">
-        <AboutMe />
-      </section>
-
       {/* PAST WORK EXPERIENCE */}
       <section id="experience" className="py-28">
         <WorkExperience />
@@ -31,6 +26,11 @@ export default function Home() {
       {/* works */}
       <section id="work" className="py-28">
         <Works />
+      </section>
+
+      {/* ABOUT ME */}
+      <section id="about" className="py-28">
+        <AboutMe />
       </section>
 
       {/* contact me */}

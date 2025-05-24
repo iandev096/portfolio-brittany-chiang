@@ -13,7 +13,7 @@ export default function AboutMe({}: Props) {
     <div>
       <div className="flex flex-col sm:flex-row justify-between">
         <div className="text-sm space-y-4 sm:w-8/12 sm:mr-12">
-          <SectionHeading prepend="01" title="About Me" />
+          <SectionHeading prepend="03" title="About Me" />
           <p className="leading-relaxed">
             My foundation in software engineering is built on a strong aptitude
             for analytical problem-solving. I am passionate about dissecting
@@ -45,10 +45,10 @@ export default function AboutMe({}: Props) {
 
         {/* IMAGE */}
         <div className="sm:w-4/12 sm:mt-20">
-          <div className="w-4/6 min-w-[180px] max-w-[300px] mx-auto mt-4 sm:m-0 sm:w-full bg-light opacity-90 mix-blend-color-dodge hover:mix-blend-normal outline outline-2 outline-offset-8 outline-secondary hover:outline-gray-dark">
+          <div className="w-4/6 min-w-[180px] max-w-[300px] mx-auto mt-4 sm:m-0 sm:w-full  outline outline-2 outline-offset-8  hover:outline-secondary outline-gray-dark">
             <img
-              className="h-full w-full brightness-95"
-              src="/images/me.jpg"
+              className="h-full w-full brightness-95 opacity-80"
+              src="/images/me2.jpg"
               alt="Isaac Anyimiah"
             />
           </div>
